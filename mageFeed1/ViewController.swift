@@ -13,9 +13,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    func bbb()  {
-        
-    }
 
 }
 
