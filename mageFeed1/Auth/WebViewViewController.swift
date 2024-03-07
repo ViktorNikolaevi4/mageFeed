@@ -23,7 +23,7 @@ class WebViewViewController: UIViewController {
     @IBOutlet private var webView: WKWebView!
     
     weak var delegate: WebViewViewControllerDelegate?
-    let constants = Constants()
+ //   let constants = Constants()
      
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +32,10 @@ class WebViewViewController: UIViewController {
         
         var urlComponents = URLComponents(string: UnsplashAuthorizeURLString)!
         urlComponents.queryItems = [
-            URLQueryItem(name: "client_id", value: constants.AccessKey),
-            URLQueryItem(name: "redirect_uri", value: constants.RedirectURI),
+            URLQueryItem(name: "client_id", value: Constants.AccessKey),
+            URLQueryItem(name: "redirect_uri", value: Constants.RedirectURI),
             URLQueryItem(name: "response_type", value: "code"),
-            URLQueryItem(name: "scope", value: constants.AccessScope)
+            URLQueryItem(name: "scope", value: Constants.AccessScope)
         ]
         let url = urlComponents.url!
         

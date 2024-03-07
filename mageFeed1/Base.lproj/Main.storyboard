@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFh-Eu-Q9t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lwc-Dc-vFz">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ChD-s6-QX0">
             <objects>
-                <tabBarController id="QCM-JQ-UfZ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QCM-JQ-UfZ" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IVl-or-Btd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -62,11 +62,16 @@
                                     <constraint firstAttribute="height" constant="60" id="Zuh-xR-Qik"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgr-YP-Nl4">
-                                <rect key="frame" x="16" y="693.66666666666663" width="361" height="34.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgr-YP-Nl4">
+                                <rect key="frame" x="25" y="680" width="343" height="48"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="CCk-ex-ooI"/>
+                                    <constraint firstAttribute="height" constant="48" id="nnr-h7-Jnd"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Войти">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="baseForegroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
@@ -83,11 +88,10 @@
                         <viewLayoutGuide key="safeArea" id="xjJ-Ex-URq"/>
                         <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="xjJ-Ex-URq" firstAttribute="trailing" secondItem="Sgr-YP-Nl4" secondAttribute="trailing" constant="16" id="9s7-D8-Xuk"/>
                             <constraint firstItem="xwG-XW-v03" firstAttribute="leading" secondItem="0lb-6h-Q9j" secondAttribute="leading" constant="158" id="Das-iI-ySE"/>
-                            <constraint firstItem="Sgr-YP-Nl4" firstAttribute="leading" secondItem="xjJ-Ex-URq" secondAttribute="leading" constant="16" id="URu-Un-fZT"/>
-                            <constraint firstItem="xjJ-Ex-URq" firstAttribute="bottom" secondItem="Sgr-YP-Nl4" secondAttribute="bottom" constant="90" id="Xha-P4-u32"/>
+                            <constraint firstItem="Sgr-YP-Nl4" firstAttribute="bottom" secondItem="0lb-6h-Q9j" secondAttribute="bottom" constant="-124" id="Nxr-Oo-6tq"/>
                             <constraint firstItem="xwG-XW-v03" firstAttribute="top" secondItem="0lb-6h-Q9j" secondAttribute="top" constant="376" id="ay5-qx-ipj"/>
+                            <constraint firstItem="Sgr-YP-Nl4" firstAttribute="centerX" secondItem="xjJ-Ex-URq" secondAttribute="centerX" id="hQk-I4-pnT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ODX-gT-DvP"/>
@@ -320,8 +324,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jFh-Eu-Q9t" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="INz-h5-gzq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xti-MJ-gfV">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -333,6 +338,34 @@
             </objects>
             <point key="canvasLocation" x="23.664122137404579" y="-960.56338028169023"/>
         </scene>
+        <!--Unsplash-->
+        <scene sceneID="4hY-xs-mno">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="Lwc-Dc-vFz" customClass="SplashViewController" customModule="mageFeed1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KyZ-Il-dy3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen_logo" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-fe-ZjQ">
+                                <rect key="frame" x="160" y="388.66666666666669" width="73" height="75"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IW0-7d-RWu"/>
+                        <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xzg-fe-ZjQ" firstAttribute="centerY" secondItem="KyZ-Il-dy3" secondAttribute="centerY" id="Sax-jA-9UY"/>
+                            <constraint firstItem="xzg-fe-ZjQ" firstAttribute="centerX" secondItem="KyZ-Il-dy3" secondAttribute="centerX" id="dQj-cc-yuN"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Unsplash" id="vve-OF-6oT"/>
+                    <connections>
+                        <segue destination="jFh-Eu-Q9t" kind="presentation" identifier="ShowAuthenticationScreen" modalPresentationStyle="fullScreen" id="JVs-ko-Agm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UNd-BR-cRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-789" y="-961"/>
+        </scene>
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
@@ -341,6 +374,7 @@
         <image name="like_button_on" width="42" height="42"/>
         <image name="nav_back_button" width="24" height="24"/>
         <image name="share_button" width="50" height="50"/>
+        <image name="splash_screen_logo" width="72.666664123535156" height="75.333335876464844"/>
         <image name="tab_editorial_active" width="20" height="22"/>
         <image name="tab_profile_active" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
