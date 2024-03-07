@@ -1,9 +1,4 @@
-//
-//  SingleImageViewController.swift
-//  mageFeed1
-//
-//  Created by Виктор Корольков on 11.01.2024.
-//
+
 
 import UIKit
 

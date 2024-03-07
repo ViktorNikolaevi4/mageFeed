@@ -1,26 +1,9 @@
-//
-//  ProfileViewController.swift
-//  mageFeed1
-//
-//  Created by Виктор Корольков on 09.01.2024.
-//
+
 
 import UIKit
 
 final class ProfileViewController: UIViewController {
     
-//    @IBOutlet private var avatarImageView: UIImageView!
-//    @IBOutlet private var nameLabel: UILabel!
-    
-//    @IBOutlet private var loginNameLabel: UILabel!
-
-//    @IBOutlet private var descriptionLabel: UILabel!
-    
-//    @IBOutlet private var logoutButton: UIButton!
-    
-    
-//    @IBAction private func didTapLogoutButton(_ sender: UIButton) {
-//    }
     
     override func viewDidLoad() {
         
@@ -31,12 +14,12 @@ final class ProfileViewController: UIViewController {
         avatarImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(avatarImage)
         avatarImage.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
-        avatarImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 76).isActive = true
+        avatarImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32).isActive = true
         avatarImage.widthAnchor.constraint(equalToConstant: 70).isActive = true
         avatarImage.heightAnchor.constraint(equalToConstant: 70).isActive = true
         
-        let logoutButton = UIButton.systemButton(with: UIImage(named: "Exit 1")!, target: self, action: #selector(method))
-        logoutButton.tintColor = .systemPink
+        let logoutButtonX = UIImage(named: "Exit 1")
+        let logoutButton = UIImageView(image: logoutButtonX)
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(logoutButton)
         logoutButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
@@ -76,8 +59,8 @@ final class ProfileViewController: UIViewController {
             descriptionLabel.topAnchor.constraint(equalTo: loginNameLabel.bottomAnchor, constant: 8),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16)
         ])
-    
+        
+        
+    }
     
 }
-                                    }
-// UIButton.systemButton(with: UIImage(named: "logout_button")!, target: self, action: #selector(method))
